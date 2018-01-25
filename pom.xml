@@ -259,10 +259,11 @@
                         <releaseBranchPrefix>release/</releaseBranchPrefix>
                         <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
                         <supportBranchPrefix>support/</supportBranchPrefix>
+                        <versionPrefix>v</versionPrefix>
                         <origin>origin</origin>
                     </gitFlowConfig>
                     <keepBranch>false</keepBranch>
-                    <pushReleases>true</pushReleases>
+                    <pushReleases>false</pushReleases>
                 </configuration>
             </plugin>
             <plugin>
