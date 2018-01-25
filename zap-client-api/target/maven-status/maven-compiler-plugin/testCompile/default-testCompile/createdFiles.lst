@@ -1,0 +1,16 @@
+br/com/softplan/security/zap/api/exception/AuthenticationInfoValidationExceptionTest.class
+br/com/softplan/security/zap/api/authentication/AuthenticationHandlerFactoryTest.class
+br/com/softplan/security/zap/api/util/LogbackTestAppender.class
+br/com/softplan/security/zap/api/report/ZapReportUtilTest.class
+br/com/softplan/security/zap/api/report/ZapReportTest.class
+br/com/softplan/security/zap/api/util/BaseIT.class
+br/com/softplan/security/zap/api/authentication/NilAuthenticationHandler.class
+br/com/softplan/security/zap/api/ZapClientIT.class
+br/com/softplan/security/zap/api/authentication/AbstractAuthenticationHandlerIT.class
+br/com/softplan/security/zap/api/util/SetupIT.class
+br/com/softplan/security/zap/api/authentication/FormAuthenticationHandlerIT.class
+br/com/softplan/security/zap/api/util/ZapProperties.class
+br/com/softplan/security/zap/api/authentication/CasAuthenticationHandlerIT.class
+br/com/softplan/security/zap/api/exception/ZapAnalysisTimeoutExceptionTest.class
+br/com/softplan/security/zap/api/exception/ZapClientExceptionTest.class
+br/com/softplan/security/zap/api/authentication/AuthenticationInfoValidatorTest.class

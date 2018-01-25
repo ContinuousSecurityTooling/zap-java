@@ -1,0 +1,16 @@
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/util/SetupIT.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/ZapClientIT.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/exception/ZapAnalysisTimeoutExceptionTest.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/exception/ZapClientExceptionTest.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/authentication/AuthenticationHandlerFactoryTest.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/authentication/CasAuthenticationHandlerIT.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/util/LogbackTestAppender.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/util/ZapProperties.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/exception/AuthenticationInfoValidationExceptionTest.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/authentication/NilAuthenticationHandler.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/report/ZapReportTest.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/report/ZapReportUtilTest.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/authentication/AbstractAuthenticationHandlerIT.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/util/BaseIT.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/authentication/AuthenticationInfoValidatorTest.java
+/Users/mreinhardt/Documents/Programmierung/repositories/git/private/continuous-security-tooling/zap-java/zap-client-api/src/test/java/br/com/softplan/security/zap/api/authentication/FormAuthenticationHandlerIT.java
