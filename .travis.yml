@@ -8,4 +8,4 @@ jdk:
   - openjdk7
 
 install: mvn install -DskipTests=true -q
-script: mvn verify -B -q
+script: mvn verify snyk:monitor -B -q
