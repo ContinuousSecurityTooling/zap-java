@@ -162,12 +162,12 @@
 
             <!-- Project modules version -->
             <dependency>
-                <groupId>com.hyper2k</groupId>
+                <groupId>net.continuous-security-tools</groupId>
                 <artifactId>zap-utils</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.hyper2k</groupId>
+                <groupId>net.continuous-security-tools</groupId>
                 <artifactId>zap-client-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
