@@ -289,7 +289,7 @@
                         <releaseBranchPrefix>release/</releaseBranchPrefix>
                         <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
                         <supportBranchPrefix>support/</supportBranchPrefix>
-                        <versionPrefix>v</versionPrefix>
+                        <versionTagPrefix>v</versionTagPrefix>
                         <origin>origin</origin>
                     </gitFlowConfig>
                     <keepBranch>false</keepBranch>
