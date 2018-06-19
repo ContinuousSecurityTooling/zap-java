@@ -45,7 +45,7 @@ timeout(60) {
                 }
 
                 stage('Sonar') {
-                    withCredentials([string(credentialsId: 'sonarcloud-token', variable: 'sonar.login')]) {
+                    withSonarQubeEnv('sonarcloud.io') {
                         sh "./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=hypery2k-github"
                     }
                 }
