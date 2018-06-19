@@ -7,5 +7,5 @@ jdk:
   - oraclejdk8
   - openjdk7
 
-install: mvn install -DskipTests=true -q
-script: mvn verify snyk:monitor -B -q
+install: ./mvnw install -DskipTests=true -q
+script: ./mvnw verify snyk:monitor -B -q
