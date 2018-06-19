@@ -29,7 +29,7 @@ timeout(20) {
 
             stage('Start Release') {
                 echo "releaseVersion: ${releaseVersion}"
-                sh "./mvnw gitflow:release -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${developmentVersion} -DskipITs=true "
+                sh "GPG_TTY=\$(tty) ./mvnw gitflow:release -DreleaseVersion=${releaseVersion} -DdevelopmentVersion=${developmentVersion} -DskipITs=true "
             }
         } catch (e) {
             mail subject: "${env.JOB_NAME} (${env.BUILD_NUMBER}): Error on build", to: 'github@martinreinhardt-online.de', body: "Please go to ${env.BUILD_URL}."
