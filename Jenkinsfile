@@ -39,7 +39,7 @@ timeout(60) {
 
             stage('Deploy') {
                 if (git.isProductionBranch()) {
-                    sh "./mvnw -Prelease package source:jar gpg:sign install:install deploy:deploy"
+                    sh "GPG_TTY=\$(tty) ./mvnw -Prelease package source:jar gpg:sign install:install deploy:deploy"
                 } else {
                     sh "./mvnw deploy"
                 }

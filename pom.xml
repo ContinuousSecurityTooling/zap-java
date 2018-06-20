@@ -4,11 +4,11 @@
 
     <groupId>net.continuous-security-tools</groupId>
     <artifactId>zap-java-integration</artifactId>
-    <version>0.3.0</version>
+    <version>0.3.1</version>
     <packaging>pom</packaging>
 
-    <name>ZAP Maven Plugin Parent</name>
-    <description>Parent project for the ZAP Maven Plugin</description>
+    <name>ZAP Java Integration</name>
+    <description>Java Integration for OWASP ZAP</description>
     <url>https://github.com/ContinuousSecurityTooling/zap-maven-plugin</url>
 
     <modules>
@@ -189,7 +189,35 @@
                     </configuration>
                 </plugin>
 
-                <!-- -->
+                <!-- Attach Javadoc and source -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <!-- Snyk -->
 
                 <plugin>
                     <groupId>io.snyk</groupId>
