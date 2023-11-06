@@ -75,10 +75,21 @@
         <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+        <surefire.argLine/>
+
+        <sonar.projectKey>ContinuousSecurityTooling_zap-java</sonar.projectKey>
+        <sonar.organization>continuoussecuritytooling</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <!-- Point the Sonar Qube Plugin always to the same aggregated JaCoCo report -->
+        <sonar.coverage.jacoco.xmlReportPaths>
+          ${project.basedir}/../zap-client-api/target/site/jacoco/jacoco.xml,
+          ${project.basedir}/../zap-report-parser/target/site/jacoco/jacoco.xml
+        </sonar.coverage.jacoco.xmlReportPaths>
 
         <!-- Maven plugins versions -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-javadoc-plugin.version>3.6.0</maven-javadoc-plugin.version>
+        <maven-surefire-plugin.version>3.2.1</maven-surefire-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
         <maven-failsafe-plugin.version>3.2.1</maven-failsafe-plugin.version>
         <maven-plugin-plugin.version>3.9.0</maven-plugin-plugin.version>
@@ -99,6 +110,7 @@
         <maven-plugin-annotations.version>3.10.1</maven-plugin-annotations.version>
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.3</logback.version>
+        <jacoco.version>0.8.11</jacoco.version>
         <testng.version>7.8.0</testng.version>
     </properties>
 
@@ -306,6 +318,19 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <threadCount>1</threadCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
+                    <argLine>
+                        @{surefire.argLine}  --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+                    </argLine>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>com.amashchenko.maven.plugin</groupId>
                 <artifactId>gitflow-maven-plugin</artifactId>
                 <version>${maven-plugin.gitflow.version}</version>
@@ -333,6 +358,34 @@
                     <organisation>hypery2k_orga</organisation>
                     <team>Owners</team>
                 </configuration>
+            </plugin>
+
+            <!-- Coverage metering -->
+            <plugin>
+              <groupId>org.jacoco</groupId>
+              <artifactId>jacoco-maven-plugin</artifactId>
+              <version>${jacoco.version}</version>
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>prepare-agent</goal>
+                  </goals>
+                          <configuration>
+                              <propertyName>surefire.argLine</propertyName>
+                          </configuration>
+                </execution>
+                <!-- attached to Maven test phase -->
+                <execution>
+                  <id>report</id>
+                  <phase>test</phase>
+                  <goals>
+                    <goal>report</goal>
+                  </goals>
+                          <configuration>
+                              <outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
+                          </configuration>
+                </execution>
+              </executions>
             </plugin>
         </plugins>
     </build>
