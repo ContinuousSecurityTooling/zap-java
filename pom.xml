@@ -72,7 +72,7 @@
     </distributionManagement>
 
     <properties>
-        <java.version>1.7</java.version>
+        <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <surefire.argLine/>
@@ -198,6 +198,14 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <compilerArgs>
+                            <compilerArg></compilerArg>
+                            <arg>--add-exports</arg>
+                            <arg>java.xml/com.sun=ALL-UNNAMED</arg>
+                            <arg>--add-exports</arg>
+                            <arg>java.xml/com.sun.org.apache.xerces.internal.impl.io=ALL-UNNAMED</arg>
+                        </compilerArgs>
                     </configuration>
                 </plugin>
 
