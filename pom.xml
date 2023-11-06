@@ -88,7 +88,7 @@
 
         <!-- Maven plugins versions -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-        <maven-javadoc-plugin.version>3.6.0</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.6.2</maven-javadoc-plugin.version>
         <maven-surefire-plugin.version>3.2.1</maven-surefire-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
         <maven-failsafe-plugin.version>3.2.1</maven-failsafe-plugin.version>
