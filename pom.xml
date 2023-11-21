@@ -4,7 +4,7 @@
 
     <groupId>net.continuous-security-tools</groupId>
     <artifactId>zap-java-integration</artifactId>
-    <version>0.3.1</version>
+    <version>0.3.2</version>
     <packaging>pom</packaging>
 
     <name>ZAP Java Integration</name>
@@ -72,34 +72,46 @@
     </distributionManagement>
 
     <properties>
-        <java.version>1.7</java.version>
+        <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+        <surefire.argLine/>
+
+        <sonar.projectKey>ContinuousSecurityTooling_zap-java</sonar.projectKey>
+        <sonar.organization>continuoussecuritytooling</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <!-- Point the Sonar Qube Plugin always to the same aggregated JaCoCo report -->
+        <sonar.coverage.jacoco.xmlReportPaths>
+          ${project.basedir}/../zap-client-api/target/site/jacoco/jacoco.xml,
+          ${project.basedir}/../zap-report-parser/target/site/jacoco/jacoco.xml
+        </sonar.coverage.jacoco.xmlReportPaths>
 
         <!-- Maven plugins versions -->
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-        <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
-        <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-        <maven-failsafe-plugin.version>2.20.1</maven-failsafe-plugin.version>
-        <maven-plugin-plugin.version>3.5</maven-plugin-plugin.version>
-        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
-        <maven-plugin.gitflow.version>1.8.0</maven-plugin.gitflow.version>
-        <maven-snyk-plugin.version>1.1.1</maven-snyk-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-javadoc-plugin.version>3.6.2</maven-javadoc-plugin.version>
+        <maven-surefire-plugin.version>3.2.2</maven-surefire-plugin.version>
+        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <maven-failsafe-plugin.version>3.2.2</maven-failsafe-plugin.version>
+        <maven-plugin-plugin.version>3.10.2</maven-plugin-plugin.version>
+        <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
+        <maven-plugin.gitflow.version>1.20.0</maven-plugin.gitflow.version>
+        <maven-snyk-plugin.version>2.2.0</maven-snyk-plugin.version>
 
         <!-- Dependencies versions -->
-        <zap-api-java.version>1.5.0</zap-api-java.version>
+        <zap-api-java.version>1.13.0</zap-api-java.version>
         <jdom.version>1.1.1</jdom.version>
-        <selenium.version>2.49.1</selenium.version>
+        <selenium.version>2.53.1</selenium.version>
         <phantomjsdriver.version>1.2.0</phantomjsdriver.version>
-        <commons-lang.version>3.7</commons-lang.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-lang.version>3.13.0</commons-lang.version>
+        <commons-io.version>2.15.0</commons-io.version>
         <commons-configuration.version>1.10</commons-configuration.version>
-        <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
-        <maven-plugin-annotations.version>3.5</maven-plugin-annotations.version>
-        <slf4j.version>1.7.25</slf4j.version>
+        <maven-plugin-api.version>3.9.5</maven-plugin-api.version>
+        <maven-plugin-annotations.version>3.10.2</maven-plugin-annotations.version>
+        <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.3</logback.version>
-        <testng.version>6.9.10</testng.version>
+        <jacoco.version>0.8.11</jacoco.version>
+        <testng.version>7.8.0</testng.version>
     </properties>
 
     <dependencyManagement>
@@ -186,6 +198,14 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <compilerArgs>
+                            <compilerArg/>
+                            <arg>--add-exports</arg>
+                            <arg>java.xml/com.sun=ALL-UNNAMED</arg>
+                            <arg>--add-exports</arg>
+                            <arg>java.xml/com.sun.org.apache.xerces.internal.impl.io=ALL-UNNAMED</arg>
+                        </compilerArgs>
                     </configuration>
                 </plugin>
 
@@ -242,7 +262,7 @@
                     <configuration>
                         <apiToken>${SNYK_API_TOKEN}</apiToken>
                         <failOnSeverity>medium</failOnSeverity>
-                        <org></org>
+                        <org/>
                     </configuration>
                 </plugin>
 
@@ -306,6 +326,19 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <threadCount>1</threadCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
+                    <argLine>
+                        @{surefire.argLine}  --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+                    </argLine>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>com.amashchenko.maven.plugin</groupId>
                 <artifactId>gitflow-maven-plugin</artifactId>
                 <version>${maven-plugin.gitflow.version}</version>
@@ -333,6 +366,34 @@
                     <organisation>hypery2k_orga</organisation>
                     <team>Owners</team>
                 </configuration>
+            </plugin>
+
+            <!-- Coverage metering -->
+            <plugin>
+              <groupId>org.jacoco</groupId>
+              <artifactId>jacoco-maven-plugin</artifactId>
+              <version>${jacoco.version}</version>
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>prepare-agent</goal>
+                  </goals>
+                          <configuration>
+                              <propertyName>surefire.argLine</propertyName>
+                          </configuration>
+                </execution>
+                <!-- attached to Maven test phase -->
+                <execution>
+                  <id>report</id>
+                  <phase>test</phase>
+                  <goals>
+                    <goal>report</goal>
+                  </goals>
+                          <configuration>
+                              <outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
+                          </configuration>
+                </execution>
+              </executions>
             </plugin>
         </plugins>
     </build>
@@ -379,6 +440,12 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
