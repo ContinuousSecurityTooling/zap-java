@@ -17,12 +17,14 @@ jobs:
           java-version: '11'
           check-latest: true
           server-id: 'central'
-          server-username: MVN_CENTRAL_USERNAME
-          server-password: MVN_CENTRAL_PASSWORD
+          server-username: OSSRH_USERNAME
+          server-password: OSSRH_PASSWORD
           cache: 'maven'
       - name: Build & Deploy
         run: |
+          git config --global user.name github-actions[bot]
+          git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
           mvn -B gitflow:release
         env:
-          MVN_CENTRAL_USERNAME: ${{ secrets.MVN_CENTRAL_USERNAME }}
-          MVN_CENTRAL_PASSWORD: ${{ secrets.MVN_CENTRAL_PASSWORD }}
+          OSSRH_USERNAME: ${{ secrets.OSS_SONATYPE_USER }}
+          OSSRH_PASSWORD: ${{ secrets.OSS_SONATYPE_PASS }}
