@@ -355,6 +355,7 @@
                     </gitFlowConfig>
                     <keepBranch>false</keepBranch>
                     <pushReleases>false</pushReleases>
+                    <releaseMergeFFOnly>true</releaseMergeFFOnly>
                 </configuration>
             </plugin>
             <plugin>
