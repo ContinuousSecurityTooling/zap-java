@@ -356,6 +356,7 @@
                     <keepBranch>false</keepBranch>
                     <pushReleases>false</pushReleases>
                     <releaseMergeFFOnly>true</releaseMergeFFOnly>
+                    <releaseMergeNoFF>false</releaseMergeNoFF>
                 </configuration>
             </plugin>
             <plugin>
