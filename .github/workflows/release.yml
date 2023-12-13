@@ -42,20 +42,25 @@ jobs:
           git fetch --tags
           # Get latest tag name
           latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          version=$(echo $latestTag | sed -e "s/v//g")
           # Checkout latest tag
           echo checking out ${latestTag}
           git checkout $latestTag
+          # Deploy
+          mvn deploy -DskipTests=true
           # Build changelog
-          conventional-changelog -p angular -i CHANGELOG.md -s
+          echo "{\"version\":\"$version\"}" > config.json
+          conventional-changelog -p angular -i CHANGELOG.md -s -c config.json
+          rm config.json
           git stash
           # Push changes
           git checkout develop
           git stash apply
           git add CHANGELOG.md
           git commit -m "chore: Updating changelog"
-          git checkout -b release/$latestTag
+          git checkout -b release/$version
           git push origin $latestTag
-          git push origin release/$latestTag
+          git push origin release/$version
         env:
           OSSRH_USERNAME: ${{ secrets.OSS_SONATYPE_USER }}
           OSSRH_PASSWORD: ${{ secrets.OSS_SONATYPE_PASS }}
