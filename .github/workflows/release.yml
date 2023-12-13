@@ -1,7 +1,13 @@
-name: release-workflow # You may choose a different name
+name: Trigger release # You may choose a different name
 run-name: Release run ${{ github.run_number }} # Enumerates entries in the "workflow runs" view
 on:
   workflow_dispatch: # Only run when manually started
+    inputs:
+      release_args:
+        description: 'Arguments for gitflow:release, e.g. -DreleaseVersion=...'
+        required: false
+        type: string
+
 jobs:
   release: # Arbitrarily chosen
     name: Release # Arbitrarily chosen
@@ -25,7 +31,7 @@ jobs:
           git config --global user.name github-actions[bot]
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
           git pull origin main --allow-unrelated-histories
-          mvn -B gitflow:release
+          mvn -B gitflow:release ${{ inputs.release_args }}
         env:
           OSSRH_USERNAME: ${{ secrets.OSS_SONATYPE_USER }}
           OSSRH_PASSWORD: ${{ secrets.OSS_SONATYPE_PASS }}
