@@ -326,7 +326,7 @@
                         <origin>origin</origin>
                     </gitFlowConfig>
                     <keepBranch>false</keepBranch>
-                    <pushReleases>true</pushReleases>
+                    <pushReleases>false</pushReleases>
                     <skipReleaseMergeProdBranch>true</skipReleaseMergeProdBranch>
                     <releaseMergeFFOnly>true</releaseMergeFFOnly>
                     <releaseMergeNoFF>false</releaseMergeNoFF>
