@@ -43,7 +43,7 @@ jobs:
           # Get latest tag name
           latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
           # Checkout latest tag
-          echo checking out ${latesttag}
+          echo checking out ${latestTag}
           git checkout $latestTag
           # Build changelog
           conventional-changelog -p angular -i CHANGELOG.md -s
@@ -51,6 +51,7 @@ jobs:
           # Push changes
           git checkout develop
           git stash apply
+          git add CHANGELOG.md
           git commit -m "chore: Updating changelog"
           git checkout -b release/$latestTag
           git push origin $latestTag
