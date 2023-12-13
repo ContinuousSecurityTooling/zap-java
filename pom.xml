@@ -327,6 +327,7 @@
                     </gitFlowConfig>
                     <keepBranch>false</keepBranch>
                     <pushReleases>false</pushReleases>
+                    <pushRemote>false</pushRemote>
                     <skipReleaseMergeProdBranch>true</skipReleaseMergeProdBranch>
                     <releaseMergeFFOnly>true</releaseMergeFFOnly>
                     <releaseMergeNoFF>false</releaseMergeNoFF>
