@@ -46,8 +46,8 @@ jobs:
           # Checkout latest tag
           echo checking out ${latestTag}
           git checkout $latestTag
-          # Deploy
-          mvn deploy -DskipTests=true
+          # Deploy to https://oss.sonatype.org/index.html#stagingRepositories
+          mvn -Prelease deploy -DskipTests=true
           # Build changelog
           echo "{\"version\":\"$version\"}" > config.json
           conventional-changelog -p angular -i CHANGELOG.md -s -c config.json
