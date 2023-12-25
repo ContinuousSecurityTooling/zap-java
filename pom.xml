@@ -95,7 +95,7 @@
         <maven-plugin-plugin.version>3.10.2</maven-plugin-plugin.version>
         <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
-        <maven-plugin.gitflow.version>1.20.0</maven-plugin.gitflow.version>
+        <maven-plugin.gitflow.version>1.21.0</maven-plugin.gitflow.version>
         <maven-snyk-plugin.version>2.2.0</maven-snyk-plugin.version>
 
         <!-- Dependencies versions -->
