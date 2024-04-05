@@ -100,7 +100,11 @@
             <artifactId>selenium-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.detro</groupId>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>htmlunit3-driver</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
         </dependency>
         <dependency>
