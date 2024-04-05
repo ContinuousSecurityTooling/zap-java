@@ -95,10 +95,6 @@
             <artifactId>selenium-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.detro</groupId>
-            <artifactId>phantomjsdriver</artifactId>
-        </dependency>
-        <dependency>
             <groupId>net.continuous-security-tools</groupId>
             <artifactId>zap-utils</artifactId>
             <version>${project.version}</version>
