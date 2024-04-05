@@ -1,4 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>ContinuousSecurityTooling/renovate-config"]
+  "extends": ["github>ContinuousSecurityTooling/renovate-config"],
+  "packageRules": [
+    {
+      "groupName": "SLF4J Releases",
+      "matchDatasources": ["docker", "github-tags", "maven"],
+      "matchPackagePatterns": [
+        "^org.slf4j:",
+        "^ch.qos.logback:"
+      ],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin"]
+    }
+  ]
 }
