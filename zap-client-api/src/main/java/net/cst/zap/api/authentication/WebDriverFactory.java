@@ -1,18 +1,14 @@
 package net.cst.zap.api.authentication;
 
+import net.cst.zap.api.model.AuthenticationInfo;
+import net.cst.zap.commons.ZapInfo;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import net.cst.zap.api.model.AuthenticationInfo;
-import net.cst.zap.commons.ZapInfo;
 
 public final class WebDriverFactory {
 
@@ -55,13 +51,6 @@ public final class WebDriverFactory {
         ChromeOptions profile = new ChromeOptions();
         profile.addArguments("--proxy-server=http://" + host + ":" + port);
         return new ChromeDriver(profile);
-    }
-
-    private static WebDriver makePhantomJSDriver(String host, int port) {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("proxy", createProxy(host, port));
-
-        return new PhantomJSDriver(capabilities);
     }
 
     private static Proxy createProxy(String host, int port) {
