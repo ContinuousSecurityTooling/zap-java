@@ -3,7 +3,9 @@ package net.cst.zap.api.model;
 public enum SeleniumDriver {
 
 	HTMLUNIT("HtmlUnit"), 
-	FIREFOX("Firefox"), 
+	FIREFOX("Firefox"),
+
+	CHROME("Chrome"),
 	PHANTOMJS("PhantomJS");
 	
 	private String name;

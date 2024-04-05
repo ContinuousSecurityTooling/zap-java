@@ -2,6 +2,8 @@ package net.cst.zap.api.authentication;
 
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -14,14 +16,6 @@ import net.cst.zap.commons.ZapInfo;
 
 public final class WebDriverFactory {
 
-
-	// Chrome support was dropped due to ChromeDriver being incompatible with the RemoteDriver version that PhantomJSDriver uses
-//	public static ChromeDriver makeChromeDriver(String host, int port) {
-//	    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-//	    capabilities.setCapability("proxy", createProxy(host, port));
-//
-//	    return new ChromeDriver(capabilities);
-//	}
     private static final int FIREFOX_MANUAL_PROXY_CONFIGURATION_OPTION = 1;
 
     public static WebDriver makeWebDriver(ZapInfo zapInfo, AuthenticationInfo authenticationInfo) {
@@ -33,6 +27,8 @@ public final class WebDriverFactory {
                 return makeHtmlUnitDriver(host, port);
             case FIREFOX:
                 return makeFirefoxDriver(host, port);
+            case CHROME:
+                return makeChromeDriver(host, port);
             default:
                 return makeFirefoxDriver(host, port);
         }
@@ -54,6 +50,13 @@ public final class WebDriverFactory {
 
         return new FirefoxDriver(profile);
     }
+
+    public static ChromeDriver makeChromeDriver(String host, int port) {
+        ChromeOptions profile = new ChromeOptions();
+        profile.addArguments("--proxy-server=http://" + host + ":" + port);
+        return new ChromeDriver(profile);
+    }
+
     private static WebDriver makePhantomJSDriver(String host, int port) {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("proxy", createProxy(host, port));
