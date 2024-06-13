@@ -66,6 +66,7 @@ jobs:
         env:
           OSSRH_USERNAME: ${{ secrets.OSS_SONATYPE_USER }}
           OSSRH_PASSWORD: ${{ secrets.OSS_SONATYPE_PASS }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.OSS_SONATYPE_GPG_PASSPHRASE  }} # env variable for GPG private key passphrase
 
       - name: Build Changelog
         id: github_release
