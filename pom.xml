@@ -93,7 +93,7 @@
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
         <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
         <maven-plugin-plugin.version>3.12.0</maven-plugin-plugin.version>
-        <maven-gpg-plugin.version>3.2.2</maven-gpg-plugin.version>
+        <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
         <maven-plugin.gitflow.version>1.21.0</maven-plugin.gitflow.version>
         <maven-snyk-plugin.version>2.2.0</maven-snyk-plugin.version>
