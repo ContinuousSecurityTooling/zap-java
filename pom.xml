@@ -96,7 +96,7 @@
         <maven-gpg-plugin.version>3.2.5</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
         <maven-plugin.gitflow.version>1.21.0</maven-plugin.gitflow.version>
-        <maven-snyk-plugin.version>2.2.0</maven-snyk-plugin.version>
+        <maven-snyk-plugin.version>2.3.0</maven-snyk-plugin.version>
 
         <!-- Dependencies versions -->
         <zap-api-java.version>1.14.0</zap-api-java.version>
