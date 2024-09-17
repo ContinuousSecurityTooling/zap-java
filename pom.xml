@@ -286,28 +286,11 @@
                     </argLine>
                 </configuration>
             </plugin>
-
             <plugin>
-                <groupId>com.amashchenko.maven.plugin</groupId>
-                <artifactId>gitflow-maven-plugin</artifactId>
-                <version>${maven-plugin.gitflow.version}</version>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.1.1</version>
                 <configuration>
-                    <gitFlowConfig>
-                        <productionBranch>main</productionBranch>
-                        <developmentBranch>develop</developmentBranch>
-                        <featureBranchPrefix>feature/</featureBranchPrefix>
-                        <releaseBranchPrefix>release/</releaseBranchPrefix>
-                        <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
-                        <supportBranchPrefix>support/</supportBranchPrefix>
-                        <versionTagPrefix>v</versionTagPrefix>
-                        <origin>origin</origin>
-                    </gitFlowConfig>
-                    <keepBranch>false</keepBranch>
-                    <pushReleases>false</pushReleases>
-                    <pushRemote>false</pushRemote>
-                    <skipReleaseMergeProdBranch>true</skipReleaseMergeProdBranch>
-                    <releaseMergeFFOnly>true</releaseMergeFFOnly>
-                    <releaseMergeNoFF>false</releaseMergeNoFF>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
             <plugin>
