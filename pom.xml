@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.continuous-security-tools</groupId>
     <artifactId>zap-java-integration</artifactId>
-    <version>0.4.1-SNAPSHOT</version>
+    <version>0.4.2</version>
     <packaging>pom</packaging>
 
     <name>ZAP Java Integration</name>
@@ -49,7 +48,7 @@
         <url>https://${GITHUB_TOKEN}@github.com/ContinuousSecurityTooling/zap-java.git</url>
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v0.4.2</tag>
     </scm>
 
     <issueManagement>
@@ -76,7 +75,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-        <surefire.argLine/>
+        <surefire.argLine />
 
         <sonar.projectKey>ContinuousSecurityTooling_zap-java</sonar.projectKey>
         <sonar.organization>continuoussecuritytooling</sonar.organization>
@@ -206,7 +205,7 @@
                         <target>${java.version}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <compilerArgs>
-                            <compilerArg/>
+                            <compilerArg />
                             <arg>--add-exports</arg>
                             <arg>java.xml/com.sun=ALL-UNNAMED</arg>
                             <arg>--add-exports</arg>
@@ -240,7 +239,7 @@
                     <configuration>
                         <apiToken>${SNYK_API_TOKEN}</apiToken>
                         <failOnSeverity>medium</failOnSeverity>
-                        <org/>
+                        <org />
                     </configuration>
                 </plugin>
 
