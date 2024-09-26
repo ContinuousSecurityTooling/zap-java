@@ -36,8 +36,6 @@ jobs:
                     distribution: 'temurin' # As good as any other, see: https://github.com/actions/setup-java#supported-distributions
                     java-package: 'jdk'
                     java-version: '11'
-                    gpg-private-key: ${{ secrets.OSS_SONATYPE_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
-                    gpg-passphrase: ${{ secrets.OSS_SONATYPE_GPG_PASSPHRASE  }} # env variable for GPG private key passphrase
                     check-latest: true
                     cache: 'maven'
 
@@ -64,9 +62,11 @@ jobs:
             -   name: Create release
                 env:
                     GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+                    MAVEN_GPG_KEY: ${{ secrets.OSS_SONATYPE_GPG_PRIVATE_KEY }}
+                    MAVEN_GPG_PASSPHRASE: ${{ secrets.OSS_SONATYPE_GPG_PASSPHRASE }}
                 run: |
                     export TZ="Europe/Berlin"
-                    ./mvnw -Prelease release:prepare release:perform -B -DreleaseVersion=${{ inputs.releaseversion }} -Dusername=ci-bot -Dpassword=$GITHUB_TOKEN -DskipITs=true -Darguments="-DskipTests=true -DskipITs=true"
+                    ./mvnw -Prelease release:prepare release:perform -B -DreleaseVersion=${{ inputs.releaseversion }} -Dgpg.signer=bc -Dusername=ci-bot -Dpassword=$GITHUB_TOKEN -DskipITs=true -Darguments="-DskipTests=true -DskipITs=true -Dgpg.signer=bc"
                     # write version info
                     cat <<EOF >target/config.json
                     {
