@@ -314,9 +314,9 @@
                   <goals>
                     <goal>prepare-agent</goal>
                   </goals>
-                          <configuration>
-                              <propertyName>surefire.argLine</propertyName>
-                          </configuration>
+                  <configuration>
+                      <propertyName>surefire.argLine</propertyName>
+                  </configuration>
                 </execution>
                 <!-- attached to Maven test phase -->
                 <execution>
@@ -325,9 +325,9 @@
                   <goals>
                     <goal>report</goal>
                   </goals>
-                          <configuration>
-                              <outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
-                          </configuration>
+                  <configuration>
+                      <outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
+                  </configuration>
                 </execution>
               </executions>
             </plugin>
