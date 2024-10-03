@@ -4,7 +4,7 @@
     <parent>
         <groupId>net.continuous-security-tools</groupId>
         <artifactId>zap-java-integration</artifactId>
-        <version>0.4.3-SNAPSHOT</version>
+        <version>0.4.3</version>
         <relativePath>../</relativePath>
     </parent>
 
@@ -46,7 +46,7 @@
         <connection>scm:git:git@github.com:pdsoftplan/zap-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:pdsoftplan/zap-maven-plugin.git</developerConnection>
         <url>https://github.com/ContinuousSecurityTooling/zap-java</url>
-      <tag>HEAD</tag>
+      <tag>v0.4.3</tag>
   </scm>
 
     <issueManagement>
