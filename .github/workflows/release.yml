@@ -95,12 +95,12 @@ jobs:
                 uses: TriPSs/conventional-changelog-action@v5
                 with:
                     input-file: CHANGELOG.md
-                    github-token: ${{ secrets.GITHUB_TOKEN }}
+                    github-token: ${{ steps.app-token.outputs.token }}
                     version-file: target/config.json
                     pre-release: true
                     skip-bump: true
                     skip-tag: true
-                    skip-on-empty: false
+                    skip-on-empty: true
                     tag-prefix: 'v'
 
             -   name: Create Release on GH
