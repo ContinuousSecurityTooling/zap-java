@@ -63,7 +63,7 @@ jobs:
                         [{
                             "id": "central",
                             "username": "${{ secrets.OSS_SONATYPE_USER }}",
-                            "password": "${{ secrets.OSS_SONATYPE_USER }}"
+                            "password": "${{ secrets.OSS_SONATYPE_PASS }}"
                         },{
                             "id":"github",
                             "username": "ci-bot",
