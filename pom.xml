@@ -142,7 +142,7 @@
             </dependency>
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>htmlunit3-driver</artifactId>
+                <artifactId>selenium-chrome-driver</artifactId>
                 <version>${selenium.version}</version>
             </dependency>
             <dependency>

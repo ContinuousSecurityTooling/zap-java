@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public final class WebDriverFactory {
 
@@ -19,8 +18,6 @@ public final class WebDriverFactory {
         int port = zapInfo.getPort();
 
         switch (authenticationInfo.getSeleniumDriver()) {
-            case HTMLUNIT:
-                return makeHtmlUnitDriver(host, port);
             case FIREFOX:
                 return makeFirefoxDriver(host, port);
             case CHROME:
@@ -28,12 +25,6 @@ public final class WebDriverFactory {
             default:
                 return makeFirefoxDriver(host, port);
         }
-    }
-
-    public static HtmlUnitDriver makeHtmlUnitDriver(String host, int port) {
-        HtmlUnitDriver driver = new HtmlUnitDriver();
-        driver.setProxy(host, port);
-        return driver;
     }
 
     public static FirefoxDriver makeFirefoxDriver(String host, int port) {
