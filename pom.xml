@@ -75,7 +75,7 @@
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-        <surefire.argLine />
+        <surefire.argLine/>
 
         <sonar.projectKey>ContinuousSecurityTooling_zap-java</sonar.projectKey>
         <sonar.organization>continuoussecuritytooling</sonar.organization>
@@ -101,7 +101,7 @@
         <!-- Dependencies versions -->
         <zap-api-java.version>1.16.0</zap-api-java.version>
         <jdom.version>1.1.1</jdom.version>
-        <selenium.version>4.27.0</selenium.version>
+        <selenium.version>4.28.0</selenium.version>
         <phantomjsdriver.version>1.5.0</phantomjsdriver.version>
         <commons-lang.version>3.17.0</commons-lang.version>
         <commons-io.version>2.18.0</commons-io.version>
@@ -207,7 +207,7 @@
                         <target>${java.version}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <compilerArgs>
-                            <compilerArg />
+                            <compilerArg/>
                             <arg>--add-exports</arg>
                             <arg>java.xml/com.sun=ALL-UNNAMED</arg>
                             <arg>--add-exports</arg>
@@ -241,7 +241,7 @@
                     <configuration>
                         <apiToken>${SNYK_API_TOKEN}</apiToken>
                         <failOnSeverity>medium</failOnSeverity>
-                        <org />
+                        <org/>
                     </configuration>
                 </plugin>
 
