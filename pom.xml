@@ -3,7 +3,7 @@
 
     <groupId>net.continuous-security-tools</groupId>
     <artifactId>zap-java-integration</artifactId>
-    <version>0.6.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <name>ZAP Java Integration</name>
@@ -48,7 +48,7 @@
         <url>https://${GITHUB_TOKEN}@github.com/ContinuousSecurityTooling/zap-java.git</url>
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v1.0.0</tag>
     </scm>
 
     <issueManagement>
@@ -75,7 +75,7 @@
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-        <surefire.argLine/>
+        <surefire.argLine />
 
         <sonar.projectKey>ContinuousSecurityTooling_zap-java</sonar.projectKey>
         <sonar.organization>continuoussecuritytooling</sonar.organization>
@@ -207,7 +207,7 @@
                         <target>${java.version}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <compilerArgs>
-                            <compilerArg/>
+                            <compilerArg />
                             <arg>--add-exports</arg>
                             <arg>java.xml/com.sun=ALL-UNNAMED</arg>
                             <arg>--add-exports</arg>
@@ -241,7 +241,7 @@
                     <configuration>
                         <apiToken>${SNYK_API_TOKEN}</apiToken>
                         <failOnSeverity>medium</failOnSeverity>
-                        <org/>
+                        <org />
                     </configuration>
                 </plugin>
 
