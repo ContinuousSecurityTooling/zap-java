@@ -1,9 +1,42 @@
-## [1.0.0](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.6.0...v1.0.0) (2025-02-11)
+## [1.0.3](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.2...v1.0.3) (2025-07-16)
 
 
-### ⚠ BREAKING CHANGES
+### Bug Fixes
 
-* HtmlUnit was removed from Selenium, so this project will also drop support
+* **deps:** update dependency org.apache.commons:commons-lang3 to v3.18.0 ([8cf9ea7](https://github.com/ContinuousSecurityTooling/zap-java/commit/8cf9ea7fd0d65878853967787917a2a1a3697db7))
+* **deps:** update dependency org.apache.maven:maven-plugin-api to v3.9.10 ([cb7fc80](https://github.com/ContinuousSecurityTooling/zap-java/commit/cb7fc809fafdea9a98483994d4716cad2f5dd394))
+* **deps:** update dependency org.apache.maven:maven-plugin-api to v3.9.11 ([5056f7e](https://github.com/ContinuousSecurityTooling/zap-java/commit/5056f7e56b6b8d2996d28da7188a962554f3404d))
+* **deps:** update selenium.version to v4.33.0 ([5a2305d](https://github.com/ContinuousSecurityTooling/zap-java/commit/5a2305d36ac74218cd5226085d0465c1e5a1ee2c))
+* **deps:** update selenium.version to v4.34.0 ([ca6078b](https://github.com/ContinuousSecurityTooling/zap-java/commit/ca6078bcc84d3a449a279eca642ee7710ec71086))
+
+
+
+## [1.0.2](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.1...v1.0.2) (2025-05-07)
+
+
+### Bug Fixes
+
+* **deps:** update selenium.version to v4.32.0 ([df829d7](https://github.com/ContinuousSecurityTooling/zap-java/commit/df829d7dcb2539e8ed0b272371590318c79af5a1))
+
+
+
+## [1.0.1](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.0...v1.0.1) (2025-04-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ch.qos.logback:logback-classic to v1.5.18 ([aee1570](https://github.com/ContinuousSecurityTooling/zap-java/commit/aee157001a7ff5d9492822841a48eba40df94b0e))
+* **deps:** update dependency commons-io:commons-io to v2.19.0 ([daa9dd6](https://github.com/ContinuousSecurityTooling/zap-java/commit/daa9dd638ecfaf7694a0e36b409307008117fcec))
+* **deps:** update dependency org.testng:testng to v7.11.0 ([22d4fd8](https://github.com/ContinuousSecurityTooling/zap-java/commit/22d4fd8f36573962d25a9c97ac9a420546dcbac0))
+* **deps:** update selenium.version to v4.29.0 ([3112e1c](https://github.com/ContinuousSecurityTooling/zap-java/commit/3112e1c65358227d0030019fda2ed9e929fe4694))
+* **deps:** update selenium.version to v4.30.0 ([043cb81](https://github.com/ContinuousSecurityTooling/zap-java/commit/043cb81761420a62d3b611da8f18ef26a40eaa4a))
+* **deps:** update selenium.version to v4.31.0 ([8ad62e9](https://github.com/ContinuousSecurityTooling/zap-java/commit/8ad62e9747c3f37e34f13198cd305d6f67322480))
+* **deps:** update slf4j releases ([4d58263](https://github.com/ContinuousSecurityTooling/zap-java/commit/4d582639bc5d96105f6cdb597b21eae438bedb1e))
+
+
+
+# [1.0.0](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.6.0...v1.0.0) (2025-02-11)
+
 
 ### Bug Fixes
 
@@ -12,7 +45,15 @@
 * Drop deprecated htmlunit driver ([51d9067](https://github.com/ContinuousSecurityTooling/zap-java/commit/51d9067b8d8bb54a6c228cab6e684e6ef490bc19))
 * upgrade org.seleniumhq.selenium:selenium-java from 4.27.0 to 4.28.0 ([2c4e9dc](https://github.com/ContinuousSecurityTooling/zap-java/commit/2c4e9dc75d4af2a32f2b1b697a4c1e1ec710b786))
 
-## [0.6.0](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.5.1...v0.6.0) (2025-01-21)
+
+### BREAKING CHANGES
+
+* HtmlUnit was removed from Selenium, so this project 
+will also drop support
+
+
+
+# [0.6.0](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.5.1...v0.6.0) (2025-01-21)
 
 
 ### Bug Fixes
@@ -21,6 +62,8 @@
 * **deps:** update dependency ch.qos.logback:logback-classic to v1.5.15 ([b922e4a](https://github.com/ContinuousSecurityTooling/zap-java/commit/b922e4a2f85dca43981063512923f27c673e77c4))
 * **deps:** update dependency ch.qos.logback:logback-classic to v1.5.16 ([7a2c6df](https://github.com/ContinuousSecurityTooling/zap-java/commit/7a2c6dff75469512074bfe2e0d1faed042734e08))
 * **deps:** update dependency org.zaproxy:zap-clientapi to v1.15.0 ([1a66dc5](https://github.com/ContinuousSecurityTooling/zap-java/commit/1a66dc5507dd0ee1ce062055ca54f38aa75793fc))
+
+
 
 ## [0.5.1](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.5.0...v0.5.1) (2024-12-19)
 
@@ -31,19 +74,18 @@
 * **deps:** update dependency commons-io:commons-io to v2.18.0 ([c0cb225](https://github.com/ContinuousSecurityTooling/zap-java/commit/c0cb2253f8cacee98c09231407c5a406ea7fc47c))
 * **deps:** update selenium.version to v4.27.0 ([971d749](https://github.com/ContinuousSecurityTooling/zap-java/commit/971d749f28e50b2620239ceaebe354d743a292f3))
 
-## [0.5.0](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.4.4...v0.5.0) (2024-11-11)
+
+
+# [0.5.0](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.4.4...v0.5.0) (2024-11-11)
 
 
 ### Bug Fixes
 
 * **deps:** update selenium.version to v4.26.0 ([133c8e6](https://github.com/ContinuousSecurityTooling/zap-java/commit/133c8e6ccd113aa1bde87dc91e2c58b54ff4a257))
 
+
+
 ## [0.4.4](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.4.0...v0.4.4) (2024-11-05)
-
-
-### Features
-
-* **Selenium:** Adding Chrome suuport ([01691a0](https://github.com/ContinuousSecurityTooling/zap-java/commit/01691a005b6641d17b83895527b00d0790c23033))
 
 
 ### Bug Fixes
@@ -85,14 +127,14 @@
 * upgrade org.seleniumhq.selenium:selenium-java from 4.22.0 to 4.23.0 ([cdaebae](https://github.com/ContinuousSecurityTooling/zap-java/commit/cdaebaefe815a1c84c45d311c516c9d3e292762f))
 * upgrade org.zaproxy:zap-clientapi from 1.13.0 to 1.14.0 ([ad8e3f5](https://github.com/ContinuousSecurityTooling/zap-java/commit/ad8e3f531298e506d624f597af407423a0c8c344))
 
-## [0.4.0](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.3.2...v0.4.0) (2023-12-13)
-
 
 ### Features
 
-* **Java:** Use Java 11 ([e2f6642](https://github.com/ContinuousSecurityTooling/zap-java/commit/e2f664258916119169d0fe620e6aa3618073f2db))
-* **Renovate:** Auto-merge ([bf1c0b8](https://github.com/ContinuousSecurityTooling/zap-java/commit/bf1c0b822c478b5c52d3c8fb081438f9a4a55d6c))
-* **security:** Adding snyk plugin ([5e39653](https://github.com/ContinuousSecurityTooling/zap-java/commit/5e39653059a973db10a73a37f37379b422ec28da))
+* **Selenium:** Adding Chrome suuport ([01691a0](https://github.com/ContinuousSecurityTooling/zap-java/commit/01691a005b6641d17b83895527b00d0790c23033))
+
+
+
+# [0.4.0](https://github.com/ContinuousSecurityTooling/zap-java/compare/v0.3.2...v0.4.0) (2023-12-13)
 
 
 ### Bug Fixes
@@ -133,3 +175,13 @@
 * **release:** Corrected release build ([0da300d](https://github.com/ContinuousSecurityTooling/zap-java/commit/0da300d275ee80e1cc58be0fcaa682922ce9c25c))
 * upgrade commons-io:commons-io from 2.13.0 to 2.14.0 ([b716c25](https://github.com/ContinuousSecurityTooling/zap-java/commit/b716c2537be59a2c4eff5ba3f9b84b4431cb4a89))
 * upgrade commons-io:commons-io from 2.14.0 to 2.15.0 ([4666a43](https://github.com/ContinuousSecurityTooling/zap-java/commit/4666a43784840ab9dad3c2f212d4e9b520ee7a42))
+
+
+### Features
+
+* **Java:** Use Java 11 ([e2f6642](https://github.com/ContinuousSecurityTooling/zap-java/commit/e2f664258916119169d0fe620e6aa3618073f2db))
+* **Renovate:** Auto-merge ([bf1c0b8](https://github.com/ContinuousSecurityTooling/zap-java/commit/bf1c0b822c478b5c52d3c8fb081438f9a4a55d6c))
+* **security:** Adding snyk plugin ([5e39653](https://github.com/ContinuousSecurityTooling/zap-java/commit/5e39653059a973db10a73a37f37379b422ec28da))
+
+
+
