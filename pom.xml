@@ -112,7 +112,7 @@
         <logback.version>1.5.19</logback.version>
         <!-- versions of test dependencies -->
         <jacoco.version>0.8.12</jacoco.version>
-        <jacoco.version>0.8.13</jacoco.version>
+        <jacoco.version>0.8.14</jacoco.version>
         <testng.version>7.11.0</testng.version>
     </properties>
 
