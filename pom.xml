@@ -109,7 +109,7 @@
         <maven-plugin-api.version>3.9.16</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.16.0</maven-plugin-annotations.version>
         <slf4j.version>2.0.20</slf4j.version>
-        <logback.version>1.6.3</logback.version>
+        <logback.version>1.6.4</logback.version>
         <!-- versions of test dependencies -->
         <jacoco.version>0.8.12</jacoco.version>
         <jacoco.version>0.8.15</jacoco.version>
