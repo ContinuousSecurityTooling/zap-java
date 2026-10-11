@@ -1,3 +1,6 @@
+
+## [1.0.15](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.14...v1.0.15) (2026-10-11)
+
 ## [1.0.3](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.2...v1.0.3) (2025-07-16)
 
 
