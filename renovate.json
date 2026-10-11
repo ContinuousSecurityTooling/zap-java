@@ -3,6 +3,12 @@
   "extends": ["github>ContinuousSecurityTooling/renovate-config"],
   "packageRules": [
     {
+      "description": "Maven 3.10 leaves _remote.repositories / maven-metadata-local.xml in the central-publishing bundle, which Central rejects (central-publishing-maven-plugin 0.11.0)",
+      "matchManagers": ["maven-wrapper"],
+      "matchPackageNames": ["maven"],
+      "allowedVersions": "<3.10"
+    },
+    {
       "groupName": "SLF4J Releases",
       "matchDatasources": ["docker", "github-tags", "maven"],
       "matchPackagePatterns": [
