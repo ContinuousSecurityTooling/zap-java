@@ -23,4 +23,10 @@ jobs:
       client_id: ${{ vars.CI_CLIENT_ID }}
       java_version: '25.0.4+101.0.LTS'
       maven_args: '-Pcentral-publish -DskipTests -DskipITs'
-    secrets: inherit
+    # `secrets: inherit` doesn't cross organizations (template lives in m13tLabs)
+    secrets:
+      CI_PRIVATE_KEY: ${{ secrets.CI_PRIVATE_KEY }}
+      OSS_SONATYPE_USER: ${{ secrets.OSS_SONATYPE_USER }}
+      OSS_SONATYPE_PASS: ${{ secrets.OSS_SONATYPE_PASS }}
+      OSS_SONATYPE_GPG_PRIVATE_KEY: ${{ secrets.OSS_SONATYPE_GPG_PRIVATE_KEY }}
+      OSS_SONATYPE_GPG_PASSPHRASE: ${{ secrets.OSS_SONATYPE_GPG_PASSPHRASE }}
