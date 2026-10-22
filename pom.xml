@@ -3,7 +3,7 @@
 
     <groupId>net.continuous-security-tools</groupId>
     <artifactId>zap-java-integration</artifactId>
-    <version>1.0.16</version>
+    <version>1.0.17-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ZAP Java Integration</name>
