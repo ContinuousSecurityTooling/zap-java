@@ -1,4 +1,19 @@
 
+## [1.0.16](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.15...v1.0.16) (2026-10-22)
+
+### Dependency Updates
+
+* **deps:** Update dependency org.sonatype.central:central-publishing-maven-plugin to v0.11.1 ([2762031](https://github.com/ContinuousSecurityTooling/zap-java/commit/27620319b34b16c862502891f0139647f087f07d))
+
+* **deps:** Update dependency org.sonatype.central:central-publishing-maven-plugin to v0.12.0 ([fe40366](https://github.com/ContinuousSecurityTooling/zap-java/commit/fe403666a76432ab0a015b160e41decfea26bf89))
+
+* **deps:** Update dependency java-jdk to v25.0.5+8.0.lts ([8b1651f](https://github.com/ContinuousSecurityTooling/zap-java/commit/8b1651f05b381004359aebd22598b7c088f171ef))
+
+* **deps:** Update dependency maven to v3.10.0 ([6158a8c](https://github.com/ContinuousSecurityTooling/zap-java/commit/6158a8c67d78848b643cd7f8f9d6cf983937f951))
+
+
+
+
 ## [1.0.15](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.14...v1.0.15) (2026-10-11)
 
 ## [1.0.3](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.2...v1.0.3) (2025-07-16)
