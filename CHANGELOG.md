@@ -1,4 +1,25 @@
 
+## [1.0.17](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.16...v1.0.17) (2026-10-29)
+
+### Bug Fixes
+
+* **deps:** Update dependency ch.qos.logback:logback-classic to v1.6.6 ([68caaf7](https://github.com/ContinuousSecurityTooling/zap-java/commit/68caaf7c956ad0b11b2aa04e87eb2285a1ab979d))
+
+* **deps:** Update dependency org.seleniumhq.selenium:selenium-java to v4.52.0 ([4eb34c4](https://github.com/ContinuousSecurityTooling/zap-java/commit/4eb34c4673a5d51bb1c2e4cb1074f87f5b0a06fd))
+
+
+
+### Dependency Updates
+
+* **deps:** Update dependency org.apache.maven.plugins:maven-failsafe-plugin to v3.6.1 ([e52f17d](https://github.com/ContinuousSecurityTooling/zap-java/commit/e52f17dbdaba3f4e365f414b19fe4a7a8b27ce9e))
+
+* **deps:** Update dependency org.apache.maven.plugins:maven-surefire-plugin to v3.6.1 ([a682f5b](https://github.com/ContinuousSecurityTooling/zap-java/commit/a682f5b3974ccbb81a8c9cdc8a40cf15b3e4c552))
+
+* **deps:** Update dependency org.jacoco:jacoco-maven-plugin to v0.8.16 ([0c961cb](https://github.com/ContinuousSecurityTooling/zap-java/commit/0c961cb01d1847bbf5e23cd9433047e2b422227e))
+
+
+
+
 ## [1.0.16](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.15...v1.0.16) (2026-10-22)
 
 ### Dependency Updates
