@@ -1,4 +1,23 @@
 
+## [1.0.19](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.18...v1.0.19) (2026-11-23)
+
+### Bug Fixes
+
+* **deps:** Update dependency ch.qos.logback:logback-classic to v1.6.8 ([3e6560e](https://github.com/ContinuousSecurityTooling/zap-java/commit/3e6560ed1b88644dd6c27631c89123c21d92ac51))
+
+* **deps:** Update dependency org.apache.maven:maven-plugin-api to v3.10.2 ([636ab70](https://github.com/ContinuousSecurityTooling/zap-java/commit/636ab70558d85ed991eaec233896599f4cded902))
+
+* **deps:** Update selenium.version to v4.54.0 ([b496928](https://github.com/ContinuousSecurityTooling/zap-java/commit/b496928e2606617e09b0758e7cd16f8ba11240fc))
+
+
+
+### Dependency Updates
+
+* **deps:** Update dependency maven to v3.10.2 ([f9d710a](https://github.com/ContinuousSecurityTooling/zap-java/commit/f9d710aba5049f4d3ae97c7b709315e2854bedf2))
+
+
+
+
 ## [1.0.18](https://github.com/ContinuousSecurityTooling/zap-java/compare/v1.0.17...v1.0.18) (2026-11-19)
 
 ### Bug Fixes
